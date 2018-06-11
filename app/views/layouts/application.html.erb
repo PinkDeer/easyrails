@@ -11,10 +11,22 @@
 
   <body>
 
-    <%= link_to "Главная", root_path %>
-    <%= link_to "О нас", pages_about_path %>
+    <div class="container-fluid container-background">
+      <div class="container">
 
-    <%= yield %>
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="navbar-brand" href="<%= root_path %>">Главная</a>
+          </li>
+          <li class="nav-item">
+            <a class="navbar-brand" href="<%= pages_about_path %>">О нас</a>
+          </li>
+        </ul>
+
+        <%= yield %>
+
+      </div>
+    </div>
 
   </body>
 </html>
