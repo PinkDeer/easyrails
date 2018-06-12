@@ -1,3 +1,6 @@
+$display4-size: 2.5 rem;
+$jumbotron-bg: rgba(255,255,255,0.2);
+
 @import "bootstrap";
 
 .container-background {
@@ -5,4 +8,30 @@
   height: 100vh;
   background-size: cover;
   background-image: url(image_path('background.jpg'));
+}
+
+.jumbotron-landing {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-account {
+  background-color: #E08283;
+  color: white;
+}
+
+.btn-enter {
+  background-color: #6BB9F0;
+  color: white;
+}
+
+.nav-landing:link,
+.nav-landing:visited {
+  color: #3498DB;
+}
+.nav-landing:hover,
+.nav-landing:active {
+  color: #59ABE3;
+  text-decoration: none;
 }
