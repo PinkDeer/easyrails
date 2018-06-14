@@ -1,5 +1,6 @@
+@import url(https://fonts.googleapis.com/css?family=Nothing+You+Could+Do);
 $display4-size: 2.5 rem;
-$jumbotron-bg: rgba(255,255,255,0.2);
+$jumbotron-bg: rgba(255,255,255,0.4);
 
 @import "bootstrap";
 
@@ -15,10 +16,8 @@ $jumbotron-bg: rgba(255,255,255,0.2);
   padding-left: 0;
 }
 
-.jumbotron-landing {
-  width: 50%;
-  margin-left: auto;
-  margin-right: auto;
+.bg-transpert {
+  background-color: rgba(255,255,255,0);
 }
 
 .btn-account {
@@ -39,4 +38,12 @@ $jumbotron-bg: rgba(255,255,255,0.2);
 .nav-landing:active {
   color: #59ABE3;
   text-decoration: none;
+}
+
+.text-logo {
+  font-family: 'Nothing You Could Do', cursive;
+}
+
+.landing-logo {
+  font-size: 2rem;
 }
