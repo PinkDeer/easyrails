@@ -10,6 +10,11 @@ $jumbotron-bg: rgba(255,255,255,0.2);
   background-image: url(image_path('background.jpg'));
 }
 
+.container-login {
+  padding-right: 0;
+  padding-left: 0;
+}
+
 .jumbotron-landing {
   width: 50%;
   margin-left: auto;
