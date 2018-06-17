@@ -3,6 +3,7 @@ $display4-size: 2.5 rem;
 $jumbotron-bg: rgba(255,255,255,0.4);
 $card-cap-bg: rgba(255,255,255,0.5);
 $card-bg: rgba(255,255,255,0.4);
+$body-bg:   #ECF0F1;
 
 @import "bootstrap";
 
@@ -16,6 +17,7 @@ $card-bg: rgba(255,255,255,0.4);
 .container-login {
   padding-right: 0;
   padding-left: 0;
+  text-align: center;
 }
 
 .bg-transpert {
@@ -29,9 +31,10 @@ $card-bg: rgba(255,255,255,0.4);
 }
 
 .photo-form {
-  width: 50%;
+  display: inline-block;
   margin-left: auto;
   margin-right: auto;
+  text-align: left;
 }
 
 .btn-account {
@@ -60,9 +63,4 @@ $card-bg: rgba(255,255,255,0.4);
 
 .landing-logo {
   font-size: 2rem;
-}
-
-.bg-gray {
-  background-color: #ECF0F1;
-  height: 100vh;
 }

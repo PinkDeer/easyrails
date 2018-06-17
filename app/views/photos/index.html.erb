@@ -1,24 +1,23 @@
-<div class="jumbotron">
+
 
   <tbody>
     <% @photos.each do |photo| %>
-        <%= image_tag photo.image.url(:medium) %>
-        <%= photo.descpription %>
-        <%= photo.user.email if photo.user %>
-        <%= link_to 'Show', photo %>
+      <div class="card photo-form">
+        <div class="card-body">
+          <%= image_tag photo.image.url(:medium) %><br>
+          <strong><%= photo.descpription %><br></strong>
+          <%= photo.user.email if photo.user %><br>
+          <%= link_to 'Show', photo %>
 
-          <% if photo.user == current_user %>
-            <%= link_to 'Edit', edit_photo_path(photo) %>
-            <%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %>
-          <% end %>
-
-    <% end %>
-
-
+            <% if photo.user == current_user %>
+              | <%= link_to 'Edit', edit_photo_path(photo) %> |
+              <%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
   <br>
-
+  <br>
   <% if user_signed_in? %>
     <%= link_to 'New Photo', new_photo_path, class: "btn btn-primary" %>
   <% end %>
-
-</div>
