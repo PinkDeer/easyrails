@@ -1,3 +1,3 @@
 # README
 
-[Lessons by](http://www.easyrails.ru/)
+Lessons by [www.easyrails.ru](http://www.easyrails.ru/)
