@@ -1,17 +1,28 @@
-<%= @user.id %>
 <%= @user.email %>
+
+<% if current_user.id = @user.id %>
+<% else %>
+
+  <% if current_user.subscriptions.exists?(friend_id: @user.id) %>
+    <%= link_to "Отписаться", subscribe_profile_path(@user) %><br>
+  <% else %>
+    <%= link_to "Подписаться", unsubscribe_profile_path(@user) %>
+  <% end %>
+
+<% end %>
+
 <br>
 
-  <% @user.photos.each do |photo| %>
-      <div class="card photo-form">
-          <div class="card-block">
-              <%= image_tag photo.image.url(:medium) %><br>
-              <strong><%= photo.descpription %></strong><br>
-              <%= link_to 'Show', photo %>
-              <% if photo.user == current_user %>
-              | <%= link_to 'Edit', edit_photo_path(photo) %> |
-              <%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %>
-              <% end %>
-          </div>
-      </div>
-  <% end %>
+<% @user.photos.each do |photo| %>
+    <div class="card photo-form">
+        <div class="card-block">
+            <%= image_tag photo.image.url(:medium) %><br>
+            <strong><%= photo.descpription %></strong><br>
+            <%= link_to 'Show', photo %>
+            <% if photo.user == current_user %>
+            | <%= link_to 'Edit', edit_photo_path(photo) %> |
+            <%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %>
+            <% end %>
+        </div>
+    </div>
+<% end %>
