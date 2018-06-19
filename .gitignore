@@ -5,3 +5,4 @@ spec/*
 config/database.yml
 .idea/
 /public/system/photos/images/
+-/config/master.key
