@@ -1,10 +1,21 @@
 <% @photos.each do |photo| %>
   <div class="card photo-form">
     <div class="card-body">
-      <%= link_to photo, class: "photo-link" do %>
-      <%= image_tag photo.image.url(:medium) %><% end %><br>
-      <strong><%= photo.descpription %><br></strong>
-      <%= link_to photo.user.name, profile_path(photo.user_id) %><br>
+
+      <div class="img-container">
+        <%= link_to photo, class: "photo-link" do %>
+          <%= image_tag photo.image.url(:medium), class: "img" %>
+        <% end %>
+      </div>
+
+      <strong><%= photo.descpription %></strong><br>
+
+      <%= link_to profile_path(photo.user_id) do %>
+        <i class="ion-person"></i>  <%= photo.user.name%>
+        <% end %><br>
     </div>
+
   </div>
 <% end %>
+
+<%= will_paginate @photos, renderer: WillPaginate::ActionView::BootstrapLinkRenderer  %>

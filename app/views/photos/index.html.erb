@@ -1,14 +1,28 @@
 <% @photos.each do |photo| %>
   <div class="card photo-form">
     <div class="card-body">
-      <%= link_to photo, class: "photo-link" do %>
-      <%= image_tag photo.image.url(:medium) %><% end %><br>
+
+      <div class="img-container">
+        <%= link_to photo, class: "photo-link" do %>
+          <%= image_tag photo.image.url(:medium), class: "img" %>
+        <% end %>
+      </div>
+
       <strong><%= photo.descpription %><br></strong>
-      <%= link_to photo.user.name, profile_path(photo.user_id) %><br>
-      <% if photo.user == current_user %>
-          <%= link_to 'Edit', edit_photo_path(photo) %> |
-          <%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %>
+      
+      <%= link_to profile_path(photo.user_id) do %><br>
+        <i class="ion-person"></i>  <%= photo.user.name%>
       <% end %>
+
+      <% if photo.user == current_user %>
+          <%= link_to edit_photo_path(photo) do %>
+            <i class="ion-edit"></i> Изменить
+          <% end %> |
+          <%= link_to photo, method: :delete, data: { confirm: 'Are you sure?' } do %>
+            <i class="ion-trash-b"></i> Удалить
+          <% end %>
+      <% end %>
+
     </div>
   </div>
 <% end %>
