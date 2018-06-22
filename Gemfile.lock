@@ -138,7 +138,7 @@ GEM
       mime-types
       mimemagic (~> 0.3.0)
       terrapin (~> 0.6.0)
-    pg (0.20.0)
+    pg (1.0.0)
     popper_js (1.12.9)
     public_suffix (3.0.2)
     puma (3.11.4)
@@ -215,7 +215,7 @@ GEM
     turbolinks-source (5.1.0)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
-    uglifier (4.1.11)
+    uglifier (4.1.12)
       execjs (>= 0.3.0, < 3)
     warden (1.2.7)
       rack (>= 1.0)
@@ -250,7 +250,7 @@ DEPENDENCIES
   letter_opener
   listen (>= 3.0.5, < 3.2)
   paperclip (~> 6.0.0)
-  pg (= 0.20.0)
+  pg (>= 0.18, < 2.0)
   puma (~> 3.11)
   rails (~> 5.2.0)
   sass-rails (~> 5.0)
