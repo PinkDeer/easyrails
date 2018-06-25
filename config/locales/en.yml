@@ -74,3 +74,4 @@ en:
     submit:
       create: "Upload %{model}"
       update: "Update %{model}"
+      

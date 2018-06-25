@@ -1,6 +1,6 @@
 <div class="card devise-form">
   <div class="card-header">
-    <h2>Забыли пароль?</h2>
+    <h2><%= t('devise.titles.forgot_password') %></h2>
   </div>
   <div class="card-body">
 
@@ -13,7 +13,7 @@
       </div>
 
       <div class="actions">
-        <%= f.submit "Прислать ссылку на сброс пароля", class: "btn btn-primary" %>
+        <%= f.submit t('devise.buttons.reset_password'), class: "btn btn-primary" %>
       </div>
     <% end %>
 
